@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Usługi informatyczne</title>
+    <link rel="icon" href="logo.png" type="image/png">
+    <link rel="stylesheet" href="styl.css">
+    <script>
+        function wyslijFormularz() {
+            var imie = document.getElementById('imie').value;
+            var nazwisko = document.getElementById('nazwisko').value;
+            var email = document.getElementById('email').value;
+            var usluga = document.getElementById('usluga').value;
+            var regulamin = document.getElementById('regulamin').checked;
+            var wynikDiv = document.getElementById('wynik');
+
+            wynikDiv.innerHTML = ""; // Czyszczenie poprzedniego wyniku
+
+            if (!regulamin) {
+                var pBłąd = document.createElement('p');
+                pBłąd.style.color = 'red';
+                pBłąd.innerHTML = "Musisz zapoznać się z regulaminem";
+                wynikDiv.appendChild(pBłąd);
+            } else {
+                var p1 = document.createElement('p');
+                p1.innerHTML = (imie + " " + nazwisko).toUpperCase();
+                
+                var p2 = document.createElement('p');
+                p2.innerHTML = "Treść Twojej sprawy: " + usluga;
+                
+                var p3 = document.createElement('p');
+                p3.innerHTML = "Na podany e-mail zostanie wysłana oferta.";
+
+                wynikDiv.appendChild(p1);
+                wynikDiv.appendChild(p2);
+                wynikDiv.appendChild(p3);
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <!-- Sekcja górna: Logo i Menu -->
+        <header>
+            <div class="logo-block">
+                <img src="logo.png" alt="logo firmy">
+            </div>
+            <div class="menu-block">
+                <a href="index.html">O nas</a>
+                <a href="uslugi.html">Usługi</a>
+                <a href="kontakt.html">Kontakt</a>
+            </div>
+        </header>
+
+        <!-- Baner z animacją -->
+        <section class="banner-block">
+            <img src="animacja.gif" alt="Animowany baner">
+        </section>
+
+        <!-- Blok główny -->
+        <main>
+            <hr>
+            <h2>Kontakt</h2>
+            <table>
+                <tr>
+                    <td>Imię:</td>
+                    <td><input type="text" id="imie"></td>
+                </tr>
+                <tr>
+                    <td>Nazwisko:</td>
+                    <td><input type="text" id="nazwisko"></td>
+                </tr>
+                <tr>
+                    <td>E-mail:</td>
+                    <td><input type="text" id="email"></td>
+                </tr>
+                <tr>
+                    <td>Usługa:</td>
+                    <td><textarea id="usluga" rows="4" cols="30"></textarea></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="checkbox" id="regulamin"> Zapoznałam/em się z regulaminem</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>
+                        <input type="reset" value="Resetuj">
+                        <button type="button" onclick="wyslijFormularz()">Prześlij</button>
+                    </td>
+                </tr>
+            </table>
+            
+            <div id="wynik"></div>
+            <hr>
+        </main>
+
+        <!-- Stopka -->
+        <footer>
+            <p>Autor strony: <strong>PESEL</strong></p>
+        </footer>
+    </div>
+</body>
+</html>

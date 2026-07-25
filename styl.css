@@ -1,0 +1,102 @@
+/* Cała strona */
+body {
+    background-color: #EEEEEE;
+    font-family: serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Kontener główny */
+.container {
+    width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Wspólne dla dwóch bloków górnych (logo i menu) i stopki */
+header ,footer {
+    background-color: #C0C0C0;
+    height: 100px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/* Blok logo */
+.logo-block {
+    width: 400px;
+    float: left;
+    text-align: left;
+}
+
+.logo-block img {
+    height: 110px;
+    width: 80px;
+    vertical-align: middle;
+    margin-left: 30%;
+  
+}
+
+/* Blok menu */
+.menu-block {
+    width: 600px;
+    float: right;
+    text-align: right;
+   
+}
+
+/* Odnośniki z bloku górnego */
+.menu-block a {
+    color: #555555;
+    margin-right: 30px;
+    font-size: 200%;
+    text-decoration: none;
+    margin-left: 12%;
+}
+
+/* Baner */
+.banner-block {
+    clear: both;
+    background-color: #DDDDDD;
+    height: 200px;
+}
+
+.banner-block img {
+    height: 200px;
+    float: left;
+}
+
+/* Blok główny */
+main {
+    margin: 50px;
+    clear: both;
+    text-align: center;
+}
+
+/* Linia pozioma */
+hr {
+    background-color: #C0C0C0;
+    width: 70%;
+    height: 2px;
+    border: none;
+}
+
+/* Tabela */
+table {
+    text-align: left;
+    margin: 0 auto;
+}
+
+/* Stopka */
+footer {
+    text-align: right;
+    clear: both;
+    height: 20px;
+    background-color: #C0C0C0;
+
+}
+
+footer p {
+    margin-right: 20px;
+    margin-top: 5px;
+    margin-bottom:5px;
+}
